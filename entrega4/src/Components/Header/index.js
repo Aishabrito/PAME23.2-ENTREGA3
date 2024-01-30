@@ -1,6 +1,5 @@
 import React from "react";
 import { HeaderDiv, HeaderTitle, Menu } from "./Styles";
-import { GlobalStyle } from "../../const";
 import Button from "../Button";
 
 function Header({ title }) {

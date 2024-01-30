@@ -9,9 +9,8 @@ function Rotas() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/" element={<Home />} />
+                <Route path="/Home" element={<Home />} />
 				<Route path="/AcompanharPedidos" element={< AcompanharPedidos />} />
-				<Route path="/Home" element={<Home />} />
 				<Route path="/Categorias" element={<Categorias />} />
 				<Route path="/Novos Pedidos" element={<NovosPedidos />} />
 				<Route path="*" element={<h1>Not Found</h1>} />
