@@ -1,7 +1,17 @@
 import React from "react";
-import { StyledButtonH, StyledButtonNP, StyledButtonAP, StyledButtonC } from "./styles";
+import { StyledButtonH, StyledButtonNP, StyledButtonAP, StyledButtonC, ButtonD } from "./styles";
 import { GlobalStyle } from "../../const/index";
 import { Link } from "react-router-dom";
+
+function Button ({text, funclick}) {
+  return (
+      <ButtonD onClick={funclick}>
+          <span>{text}</span>
+      </ButtonD>
+  )
+}
+
+export default Button;
 
 function ButtonH(props) {
   return (
