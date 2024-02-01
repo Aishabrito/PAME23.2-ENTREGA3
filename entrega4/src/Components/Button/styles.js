@@ -6,8 +6,16 @@ export const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 4px solid orange;
-  width: 10vw;
+  background: brown;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  a {
+  color: black;
+  text-decoration: none; /* no underline */
+}
 `;
 
 // Botão H Style
@@ -22,7 +30,19 @@ export const StyledButtonNP = styled(StyledButton)`
 
 // Botão AP Style
 export const StyledButtonAP = styled(StyledButton)`
-  // Adicionar estilos específicos para o botão AP aqui
+   color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 10px 0 ;
+				margin-left: 0.2rem;
+    }
 `;
 
 // Botão C Style

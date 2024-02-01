@@ -1,19 +1,38 @@
-import React from "react";
-import { HeaderDiv, HeaderTitle, Menu } from "./Styles";
-import Button from "../Button";
+import React, { useState } from "react";
+
+
+import { Burger, Container, HeaderWrapper, Line, Logo, Menu, Nav, NavLink, } from "./Styles"
+
+
+import { ButtonAP } from "../Button";
 
 function Header({ title }) {
+
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsOpen(!isOpen);
+	};
+
 	return (
 		<>
-			<HeaderDiv>
-				<HeaderTitle>Delícias Salgadas </HeaderTitle>
-				<Menu>
-					<Button title={"Home"} routes="/Home"></Button>
-                    <Button title={"Novos Pedidos "} routes="/NovosPedidos"></Button>
-					<Button title={"Acompanhar Pedidos"} routes="/AcompanharPedidos"></Button>
-					<Button title={"Categorias"} routes="/Categorias"></Button>
-				</Menu>
-			</HeaderDiv>
+			<HeaderWrapper>
+				<Container>
+					<Logo>Delícias Salgadas</Logo>
+					<Nav isOpen={isOpen}>
+						<ButtonAP title={"Home"} routes="/Home"></ButtonAP>
+						<ButtonAP title={"Novos Pedidos "} routes="/NovosPedidos"></ButtonAP>
+						<ButtonAP title={"Acompanhar Pedidos"} routes="/AcompanharPedidos"></ButtonAP>
+						<ButtonAP title={"Categorias"} routes="/Categorias"></ButtonAP>
+					</Nav>
+					<Burger onClick={toggleMenu}>
+						<Line className={isOpen ? 'line1 toggle' : 'line1'}></Line>
+						<Line className={isOpen ? 'line2 toggle' : 'line2'}></Line>
+						<Line className={isOpen ? 'line3 toggle' : 'line3'}></Line>
+					</Burger>
+				</Container>
+			</HeaderWrapper>
+
 		</>
 	);
 }
