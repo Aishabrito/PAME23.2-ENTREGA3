@@ -8,11 +8,11 @@ import {
 
 import Home from './Pages/Home';
 import AcompanharPedidos from './Pages/AcompanharPedidos';
-// import  from './Pages/Home'
 import Categorias from './Pages/categorias';
 import NovoPedidos from "./Pages/novosPedidos";
 import Login from "./Pages/Login";
-import Cadastro from './Pages/cadastro'
+import Cadastro from './Pages/cadastro';
+import RegistrarPedido from './Pages/RegistrarPedido'; // Importe o componente RegistrarPedido
 
 export const Router = createBrowserRouter([
   {
@@ -39,9 +39,11 @@ export const Router = createBrowserRouter([
     path: "/NovosPedidos",
     element: <NovoPedidos />,
   },
+  {
+    path: "/RegistrarPedido", // Adicione a rota para RegistrarPedido
+    element: <RegistrarPedido />,
+  },
 ]);
-
-
 
 export function MainRoutes() {
   return (

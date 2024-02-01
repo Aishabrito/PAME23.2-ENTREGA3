@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../const";
 
 // Botão Padrão
 export const StyledButton = styled.button`
@@ -6,7 +7,7 @@ export const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: brown;
+  background: ${Colors.LaranjaClaro};
   border: none;
   outline: none;
   box-shadow: none;
@@ -14,7 +15,7 @@ export const StyledButton = styled.button`
   border-radius: 0.2rem;
   a {
   color: black;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
 }
 `;
 
@@ -36,7 +37,8 @@ export const StyledButtonAP = styled(StyledButton)`
     white-space: nowrap;
 
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        background-color:${Colors.LaranjaEscuro}
     }
 
     @media screen and (max-width: 768px) {

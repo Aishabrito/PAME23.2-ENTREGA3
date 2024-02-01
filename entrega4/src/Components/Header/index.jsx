@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-import { Burger, Container, HeaderWrapper, Line, Logo, Menu, Nav, NavLink, } from "./Styles"
+import { Burger, Container, HeaderWrapper, Line, Logo, Nav } from "./Styles"
 
 
 import { ButtonAP } from "../Button";
@@ -21,9 +21,9 @@ function Header({ title }) {
 					<Logo>Delícias Salgadas</Logo>
 					<Nav isOpen={isOpen}>
 						<ButtonAP title={"Home"} routes="/Home"></ButtonAP>
-						<ButtonAP title={"Novos Pedidos "} routes="/NovosPedidos"></ButtonAP>
-						<ButtonAP title={"Acompanhar Pedidos"} routes="/AcompanharPedidos"></ButtonAP>
-						<ButtonAP title={"Categorias"} routes="/Categorias"></ButtonAP>
+						<ButtonAP title={"Mesas "} routes="/NovosPedidos"></ButtonAP>
+						<ButtonAP title={"Pedidos"} routes="/AcompanharPedidos"></ButtonAP>
+						<ButtonAP title={"Produtos"} routes="/Categorias"></ButtonAP>
 					</Nav>
 					<Burger onClick={toggleMenu}>
 						<Line className={isOpen ? 'line1 toggle' : 'line1'}></Line>

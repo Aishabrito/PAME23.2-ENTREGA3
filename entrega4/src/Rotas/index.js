@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AcompanharPedidos from "../Pages/AcompanharPedidos";
 import Home from "../Pages/Home";
-import Categorias from "../Pages/Categorias";
-import NovosPedidos from "../Pages/NovosPedidos";
+import Categorias from "../Pages/categorias";
+import NovosPedidos from "../Pages/novosPedidos";
 
 function Rotas() {
 	return (
