@@ -17,12 +17,7 @@ export const Body = styled.div`
   height: 100vh;
   flex-direction: column;
 
-  h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: white;
-    text-decoration: underline;
-  }
+ 
 `;
 
 export const Container = styled.div`
@@ -34,8 +29,7 @@ export const Container = styled.div`
   align-items: center;
 
   h1 {
-    color: white;
-    text-decoration: underline;
+    color: black;
     font-size: 26px;
   }
 `;

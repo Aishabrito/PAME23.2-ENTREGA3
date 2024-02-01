@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { Colors } from "../../const";
 
 export const ButtonD = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80vw;
+    width: 60vw;
     min-width: 60px;
     height: 10vh;
-    background-color: #c89666;
+    background-color: ${Colors.Laranja};
     border: solid #2d545e 3px;
     border-radius: 5px;
     margin-top: 10px;
@@ -17,11 +18,11 @@ export const ButtonD = styled.button`
     }
 
     span {
-        color: #2d545e;
+        color: ${Colors.white};
     }
 
     &:hover {
-        background-color: #e1b382;
+        background-color: ${Colors.LaranjaClaro};
     }
 `
 

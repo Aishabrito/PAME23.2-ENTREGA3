@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Body, Container, Pages, StyledLink } from "./styles";
 import Header from "../../Components/Header";
-import PedidosComponent from "../../Components/PedidosC"; // Certifique-se de substituir com o nome correto do seu componente
+import PedidosC from "../../Components/PedidosC"; // Certifique-se de substituir com o nome correto do seu componente
 
 function Pedidos({ inforegistro }) {
   // Armazenamos os pedidos em um estado usando useState
@@ -22,13 +22,13 @@ function Pedidos({ inforegistro }) {
       <Header isntLogin={true}></Header>
       <Body>
         <Container>
-          <h1>Pedidos</h1>
-          <StyledLink to="/RegistrarPedido">
+          <h1>Acompanhar Pedidos</h1>
+          {listaPedidos.map((pedido, index) => (
+            <PedidosC key={index} pedido={pedido}></PedidosC>
+          ))}
+           <StyledLink to="/RegistrarPedido">
             <button>Registrar Pedido</button>
           </StyledLink>
-          {listaPedidos.map((pedido, index) => (
-            <PedidosComponent key={index} pedido={pedido}></PedidosComponent>
-          ))}
         </Container>
       </Body>
     </Pages>

@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Colors } from "../../const";
+import { Background } from "../Home/styles";
 
 export const Pages = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: #e1b382;
+  background-color: ${Colors.Bege};
   flex-direction: column;
 `;
+
 
 export const Body = styled.div`
   display: flex;
@@ -27,12 +30,13 @@ export const Container = styled.div`
   align-items: center;
 
   h1 {
-    color: white;
-    text-decoration: underline;
+    color: ${Colors.Laranja};
+    text-decoration: none ;
     font-size: 26px;
   }
 `;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  margin-top: 10vh;
 `;

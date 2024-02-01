@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Body, ButtonDiv, Container, Pages, StyledLink } from "./styles";
+import { Body, ButtonDiv, Container, Pages } from "./styles";
+import { Link } from "react-router-dom";
 import Header from "../../Components/Header";
 import Input from "../../Components/Input";
 import Button from "../../Components/Button";
@@ -38,7 +39,6 @@ function NovosPedidos() {
     <Pages>
       <Header isntLogin={true}></Header>
       <Body>
-        <h1>Novos Pedidos</h1>
         <Container>
           <h1>Registrar Novo Pedido</h1>
 
@@ -73,9 +73,9 @@ function NovosPedidos() {
               funclick={() => setStatus("Entregue")}
             />
           </ButtonDiv>
-          <StyledLink to="/Pedidos">
+          <Link to="/AcompanharPedidos">
             <Button text="Registrar Pedido" funclick={registrarPedido} />
-          </StyledLink>
+          </Link>
         </Container>
       </Body>
     </Pages>

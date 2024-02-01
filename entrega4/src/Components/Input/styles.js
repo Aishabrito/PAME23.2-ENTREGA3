@@ -12,16 +12,18 @@ export const InputDiv = styled.input`
     border: 0.2em solid ${Colors.LaranjaEscuro}; 
     background: ${Colors.Laranja}; 
     padding: 0.85em 0.8em;
-    color: #075e94;
+    color: ${Colors.MarromClaro};
     border-radius: 2em;
     width: 20vw;
-    box-shadow: 2px 7px 10px ${Colors.Shadow};
     margin-top: 1rem;
-
+    &::placeholder {
+    color: black; /* Substitua pelo código de cor desejado */
+  }
     &:hover,
     &:focus {
         border: 0.2em solid ${Colors.Laranja};
         outline: none;
+        background-color:${Colors.LaranjaClaro}
     }
 
     @media screen and (max-width: 1200px) {
