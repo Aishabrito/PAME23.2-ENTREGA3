@@ -8,7 +8,6 @@ import {
 
 import Home from './Pages/Home';
 import AcompanharPedidos from './Pages/AcompanharPedidos';
-import Categorias from './Pages/categorias';
 import NovoPedidos from "./Pages/novosPedidos";
 import Login from "./Pages/Login";
 import Cadastro from './Pages/cadastro';
@@ -31,10 +30,7 @@ export const Router = createBrowserRouter([
     path: "/AcompanharPedidos",
     element: <AcompanharPedidos />,
   },
-  {
-    path: "/Categorias",
-    element: <Categorias />,
-  },
+
   {
     path: "/NovosPedidos",
     element: <NovoPedidos />,

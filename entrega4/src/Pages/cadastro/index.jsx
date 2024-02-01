@@ -10,6 +10,8 @@ function Cadastro() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [cpf, setCpf] = useState("");
+  
+// Funções para atualizar estados com base na entrada do usuário
 
   const handleLogin = (event) => {
     setLogin(event.target.value);

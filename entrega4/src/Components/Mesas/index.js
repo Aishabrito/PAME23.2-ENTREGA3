@@ -11,6 +11,7 @@ const Mesas = () => {
   // Função para mudar o status de uma mesa e o estado do botão
   const toggleStatus = (index) => {
     const newStatus = [...statusMesas];
+    // Alternando o status da mesa entre 'disponivel' e 'ocupada'
     newStatus[index] = newStatus[index] === 'disponivel' ? 'ocupada' : 'disponivel';
     setStatusMesas(newStatus);
 
@@ -22,14 +23,18 @@ const Mesas = () => {
   return (
     <MesasContainer>
       <h1>Mesas</h1>
+      {/* Lista de mesas exibindo seu status e botão de ocupação/desocupação */}
       <ul>
         {statusMesas.map((status, index) => (
           <li key={index}>
             Mesa {index + 1} - Status: {status}
+             {/* Botão para ocupar ou desocupar a mesa com base no status atual */}
             <button
               onClick={() => toggleStatus(index)}
+               // Alterando a cor do botão com base no estado do botão
               style={{ backgroundColor: buttonStates[index] ? 'red' : '#4caf50' }}
             >
+              {/* Texto do botão dependendo do status da mesa */}
               {status === 'disponivel' ? 'Ocupar' : 'Desocupar'}
             </button>
           </li>

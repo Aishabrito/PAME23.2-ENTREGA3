@@ -8,7 +8,7 @@ export const ButtonD = styled.button`
     width: 6vw;
     min-width: 85px;
     height: 5vh;
-    background-color: #c89666;
+    background-color: ${Colors.LaranjaClaro};
     border: solid #2d545e 3px;
     border-radius: 5px;
     font-size: 13px;
