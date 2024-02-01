@@ -22,7 +22,11 @@ export const Background = styled.div`
   /* Outros estilos que você deseja aplicar */
 
 `;
+export const Title = styled.h1`
+  font-size: 5em; // Tamanho da fonte
+  text-align: center; // Centraliza o texto
 
+`;
 
 
 export const IMG = styled.img`

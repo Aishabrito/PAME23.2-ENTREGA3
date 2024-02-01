@@ -1,16 +1,25 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { InputDiv } from './styles';
-// Componente funcional para um campo de entrada de texto reutilizável
+
 function Input(props) {
+  // Adicionando um estado local para o valor do input
+  const [inputValue, setInputValue] = useState(props.value || ''); // Defina um valor inicial se necessário
+
   return (
     <InputDiv
       type={props.tipo}
       placeholder={props.placeholder}
-	   // Adicionando um evento de alteração (onChange) para atualizar a variável recebida como propriedade
-      onChange={(e) => props.setvariavel(e.target.value)}
+      // Atualizando o estado local quando o valor do input mudar
+      onChange={(e) => {
+        setInputValue(e.target.value);
+        // Passando o valor atualizado para o componente pai, se necessário
+        if (props.setvariavel) {
+          props.setvariavel(e.target.value);
+        }
+      }}
       id={props.id}
-      value={props.value}
+      value={inputValue} // Usando o estado local como valor do input
     />
   );
 }

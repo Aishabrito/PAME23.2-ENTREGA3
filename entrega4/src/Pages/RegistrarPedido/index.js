@@ -4,7 +4,6 @@ import Header from "../../Components/Header";
 import Input from "../../Components/Input";
 import Button from "../../Components/Button";
 
-
 function NovosPedidos({ onPedidoRegistrado }) {
   const [nomeCliente, setNomeCliente] = useState("");
   const [mesa, setMesa] = useState("");
@@ -20,8 +19,14 @@ function NovosPedidos({ onPedidoRegistrado }) {
       valor,
       status,
     };
-    // Chamamos a função fornecida por propriedade para adicionar o pedido à lista
-    onPedidoRegistrado(novoPedido);
+
+    // Verifica se onPedidoRegistrado é uma função antes de chamar
+    if (typeof onPedidoRegistrado === 'function') {
+      onPedidoRegistrado(novoPedido);
+    } else {
+      console.error('onPedidoRegistrado não é uma função.');
+    }
+
     setNomeCliente("");
     setMesa("");
     setProduto("");
@@ -37,25 +42,25 @@ function NovosPedidos({ onPedidoRegistrado }) {
         <Container>
           <h1>Registrar Novo Pedido</h1>
           <Input
-  placeholder="Nome do Cliente..."
-  setvariavel={setNomeCliente}
-  value={nomeCliente}
-/>
-<Input
-  placeholder="Mesa..."
-  setvariavel={setMesa}
-  value={mesa}
-/>
-<Input
-  placeholder="Produto..."
-  setvariavel={setProduto}
-  value={produto}
-/>
-<Input
-  placeholder="Valor..."
-  setvariavel={setValor}
-  value={valor}
-/>
+            placeholder="Nome do Cliente..."
+            setvariavel={setNomeCliente}
+            value={nomeCliente}
+          />
+          <Input
+            placeholder="Mesa..."
+            setvariavel={setMesa}
+            value={mesa}
+          />
+          <Input
+            placeholder="Produto..."
+            setvariavel={setProduto}
+            value={produto}
+          />
+          <Input
+            placeholder="Valor..."
+            setvariavel={setValor}
+            value={valor}
+          />
 
           <h2>Status: {status}</h2>
           <ButtonDiv>
