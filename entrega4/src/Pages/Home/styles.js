@@ -1,37 +1,28 @@
+// styles.js
 import styled from "styled-components";
 import { Colors } from "../../const";
-import imagem from "../../Assets/imagemfundohome.jpg";
-import salgados from "../../Assets/salgados.jpg"
-
+import salgados from "../../Assets/salgados.jpg";
 
 export const Background = styled.div`
-
-
-  display:flex ;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(${salgados} );
-  background-repeat: no-repeat ;
-
-
-
-  width: 100%; /* largura da tela */
-  height: 100vh; /* altura da tela */
-  background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
-  background-position: center; /* Centraliza a imagem */
-  /* Outros estilos que você deseja aplicar */
-
+  background-image: url(${salgados});
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 `;
+
+export const Container = styled.div`
+  /* Adicione estilos para o container principal */
+  /* Pode ser necessário ajustar os estilos conforme necessário */
+`;
+
 export const Title = styled.h1`
-  font-size: 5em; // Tamanho da fonte
-  text-align: center; // Centraliza o texto
-
+  color: ${Colors.Branco};
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
-
-
-export const IMG = styled.img`
- width: 100vw;
-
- border-radius: 25px;
-`;
-

@@ -15,4 +15,8 @@ export const MainContainer = styled.form`
   margin: 5rem;
   background-color: ${Colors.Laranja};
   padding: 1rem 1.4rem;
+  border-radius:20px;
+  width:320px;
+
+
 `;

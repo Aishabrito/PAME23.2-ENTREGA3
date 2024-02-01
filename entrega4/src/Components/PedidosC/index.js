@@ -8,10 +8,10 @@ function Pedidos({ nomeCliente, mesa, produto, valor, status }) {
   return (
     <ButtonD>
       <span>
-        <Info>Nome do Cliente: {nomeCliente}</Info>
-        <Info>Mesa: {mesa}</Info>
-        <Info>Produto: {produto}</Info>
-        <Info>Valor: {valor}</Info>
+        <Info>Nome do Cliente: Renata Vasconcelos {nomeCliente}</Info>
+        <Info>Mesa: 3{mesa}</Info>
+        <Info>Produto: Empada de camarão {produto}</Info>
+        <Info>Valor:12,99 {valor}</Info>
         <Info>Status: {statusText}</Info>
       </span>
     </ButtonD>

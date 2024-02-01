@@ -1,13 +1,18 @@
+// Home.jsx
 import React from "react";
 import Header from "../../Components/Header";
-import { Background, Title } from "./styles";
+import { Background, Container, Title } from "./styles"; // Importe os componentes necessários
 
 function Home() {
   return (
     <div>
       <Header />
       <Background>
-        <Title>Delícias Salgadas</Title>
+        {/* Envolve as outras divs com o componente Container */}
+        <Container>
+          <Title>Delícias Salgadas</Title>
+          {/* Outros elementos da tela podem ser adicionados aqui */}
+        </Container>
       </Background>
     </div>
   );
