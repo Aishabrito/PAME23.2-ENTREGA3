@@ -35,9 +35,11 @@ export const Info = styled.p`
     padding-right: 1vw;
     padding-left: 1vw;
 
-    @media (max-width: 768px) {
-        font-size: 15px;
-        align-items: center;
+    @media (max-width: 689px) {
+        font-size: 12px;
         display: block;
+
+    
+
     }
 `;
